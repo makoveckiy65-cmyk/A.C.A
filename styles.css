@@ -290,3 +290,62 @@ body{
     text-align: center;
   }
 }
+/* ================= MOBILE FINAL FIX (PHONE ONLY) ================= */
+@media (max-width: 520px){
+
+  /* A.C.A — делаем КРУПНЕЕ, как на рефе, без сдвигов */
+  .wideLogo{
+    transform: scaleX(1.45) scaleY(0.55);
+    letter-spacing: 0.75em;
+    font-size: 54px;
+  }
+
+  /* Дата — тоже крупнее и ровно */
+  .dateLine{
+    transform: scaleX(1.15) scaleY(0.85);
+    letter-spacing: 0.55em;
+    font-size: 16px;
+  }
+
+  /* Кнопки — аккуратные, не доминируют */
+  .actionBtn{
+    width: 90vw;
+    max-width: 340px;
+    height: 52px;
+  }
+
+  .actionBtn span{
+    font-size: 12px;
+    letter-spacing: 0.28em;
+  }
+
+  /* ===== ТАЙМЕР — ПРИПЛЮСНУТЫЙ, ЧИТАЕМЫЙ ===== */
+  .timeBig{
+    transform: scaleX(1.25) scaleY(0.75);
+    font-size: 42px;
+    gap: 1.2rem;
+  }
+
+  .timeLbl{
+    font-size: 0.5em;
+    letter-spacing: 0.2em;
+  }
+
+  /* CLOSE под таймером — ровно */
+  .timeClose{
+    transform: none;
+  }
+
+  /* ===== FOOTER — НЕ ПРИПЛЮСНУТЫЙ ===== */
+  .footLine{
+    transform: none;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+  }
+
+  .footNote{
+    transform: none;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+}
