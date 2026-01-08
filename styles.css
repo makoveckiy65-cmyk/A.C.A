@@ -1,0 +1,227 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+
+body{
+  background:#fff;
+  color:#000;
+  overflow-y:auto;
+  overflow-x:hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.isHidden{ display:none !important; }
+
+/* ====== MANUAL SHIFTS (двигай только цифры) ====== */
+:root{
+  --introShift: 75px;        /* ✅ НЕ ТРОГАЙ */
+
+  --menuAcaShift: 65px;       /* ✅ A.C.A в меню */
+  --menuDateShift: 7px;      /* ✅ дата под A.C.A */
+
+  --timeBlockShift: -44px;     /* ✅ цифры таймера */
+  --timeCloseShift: -44px;     /* ✅ кнопка CLOSE под таймером */
+
+  --footShift: 0px;          /* ✅ нижний текст */
+}
+
+/* ================= INTRO ================= */
+#intro{
+  position:fixed; inset:0;
+  display:grid; place-items:center;
+  background:#fff;
+  z-index:999;
+}
+.introCenter{
+  width: min(1200px, 92vw);
+  height: 60vh;
+  display:grid;
+  place-items:center;
+}
+.introWord{
+  opacity:0;
+  transition: opacity 2.6s ease;
+  user-select:none;
+  text-align:center;
+}
+.introWord.isShow{ opacity:1; }
+
+.wideIntro{
+  display:inline-block;
+  transform-origin:50% 50%;
+  transform: translateX(var(--introShift)) scaleX(1.55) scaleY(0.45);
+  letter-spacing: 0.90em;
+  font-size: clamp(56px, 7vw, 120px);
+  text-transform: uppercase;
+}
+
+/* ================= APP ================= */
+.app{
+  min-height: 100vh;
+  display:grid;
+  place-items:center;
+}
+.screen{
+  width: min(1200px, 92vw);
+  min-height: 122vh;
+  display:grid;
+  grid-template-rows: 1fr auto;
+  justify-items:center;
+  align-items:center;
+  padding: 6vh 0;
+}
+.content{
+  width: 100%;
+  display:grid;
+  place-items:center;
+}
+
+/* ================= BLOCK ================= */
+.block{
+  width: 720px;
+  max-width: 92vw;
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  gap: 26px;
+  text-align:center;
+}
+
+/* ================= MENU A.C.A + DATE (отдельно двигаются) ================= */
+.wideLogo{
+  display:inline-block;
+  transform-origin:50% 50%;
+  transform: translateX(var(--menuAcaShift)) scaleX(1.55) scaleY(0.45);
+  letter-spacing: 0.90em;
+  font-size: clamp(44px, 5.4vw, 96px);
+  text-transform: uppercase;
+}
+
+/* дата чуть меньше (как ты просил, чтобы "влезала") */
+.dateLine{
+  display:inline-block;
+  transform-origin:50% 50%;
+  transform: translateX(var(--menuDateShift)) scaleX(1.25) scaleY(0.70);
+  letter-spacing: 0.82em;
+  font-size: 18px;
+  opacity: .98;
+  text-transform: uppercase;
+}
+
+/* ================= BUTTONS ================= */
+.actionBtn{
+  width: 320px;
+  height: 56px;
+  border: 1px solid #000;
+  background:#fff;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+  transition: background .18s ease, color .18s ease;
+}
+.actionBtn span{
+  display:inline-block;
+  transform-origin:50% 50%;
+  transform: scaleX(1.16) scaleY(0.88);
+  letter-spacing: 0.40em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.actionBtn:hover{ background:#000; color:#fff; }
+
+.linkBtn{
+  width: 360px;
+  height: 62px;
+  border: 1px solid #000;
+  background:#fff;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+  text-decoration:none;
+  color:#000;
+  transition: background .18s ease, color .18s ease;
+}
+.linkBtn span{
+  display:inline-block;
+  transform-origin:50% 50%;
+  transform: scaleX(1.18) scaleY(0.90);
+  letter-spacing: 0.40em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.linkBtn:hover{ background:#000; color:#fff; }
+
+/* ================= BIO TEXT ================= */
+.bioText{
+  display:inline-block;
+  transform-origin:50% 50%;
+  transform: scaleX(1.10) scaleY(0.88);
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0.10em;
+  opacity: .94;
+}
+
+/* ================= TIME (ВАЖНО: всегда в одну линию) ================= */
+.timeBig{
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:baseline;
+  gap: 2.6rem;
+  white-space: nowrap;
+  font-size: clamp(60px, 7.6vw, 110px);
+  transform-origin:50% 50%;
+  transform: translateX(var(--timeBlockShift)) scaleX(1.42) scaleY(0.50);
+  text-transform: uppercase;
+}
+.timePart{
+  display:flex;
+  flex-direction: row;
+  align-items:baseline;
+  gap: .25rem;
+}
+.timeLbl{
+  font-size: .42em;
+  letter-spacing: .22em;
+  opacity: .92;
+}
+
+/* CLOSE под временем — отдельно */
+.timeClose{
+  transform: translateX(var(--timeCloseShift));
+}
+
+/* ================= FOOTER (низ отдельно) ================= */
+.foot{
+  width:100%;
+  display:grid;
+  justify-items:center;
+  gap: 6px;
+  padding: 18px 0 6px;
+  margin-top: 18px;
+}
+.footLine{
+  font-size:12px;
+  opacity:.7;
+  text-transform:lowercase;
+  transform-origin:50% 50%;
+  transform: translateX(var(--footShift)) translateY(14px) scaleX(1.18) scaleY(0.95);
+  letter-spacing: 0.28em;
+}
+.footNote{
+  font-size:12px;
+  opacity:.45;
+  text-align:center;
+  transform-origin:50% 50%;
+  transform: translateX(var(--footShift)) translateY(14px) scaleX(1.08) scaleY(0.95);
+  letter-spacing: 0.14em;
+}
+
+/* mobile */
+@media (max-width: 720px){
+  .block{ width: 92vw; }
+  .actionBtn{ width: min(320px, 88vw); }
+  .linkBtn{ width: min(360px, 90vw); }
+  .timeBig{ gap: 1.8rem; }
+}
