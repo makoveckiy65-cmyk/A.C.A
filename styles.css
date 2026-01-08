@@ -224,4 +224,69 @@ body{
   .actionBtn{ width: min(320px, 88vw); }
   .linkBtn{ width: min(360px, 90vw); }
   .timeBig{ gap: 1.8rem; }
+
+}/* ================= MOBILE FIX (PHONE ONLY) ================= */
+@media (max-width: 720px){
+
+  /* A.C.A — убираем ручные сдвиги и уменьшаем */
+  .wideLogo{
+    transform: scaleX(1.25) scaleY(0.55);
+    letter-spacing: 0.6em;
+    font-size: 42px;
+  }
+
+  /* дата — по центру и компактно */
+  .dateLine{
+    transform: scaleX(1.05) scaleY(0.8);
+    letter-spacing: 0.4em;
+    font-size: 14px;
+  }
+
+  /* кнопки — нормальный размер */
+  .actionBtn,
+  .linkBtn{
+    width: 90vw;
+    max-width: 320px;
+    height: 52px;
+  }
+
+  .actionBtn span,
+  .linkBtn span{
+    letter-spacing: 0.25em;
+    font-size: 12px;
+  }
+
+  /* таймер — ЧИТАЕМЫЙ и ВЛЕЗАЕТ */
+  .timeBig{
+    transform: scaleX(1) scaleY(1);
+    font-size: 36px;
+    gap: 1rem;
+    white-space: nowrap;
+  }
+
+  .timeLbl{
+    font-size: 0.45em;
+  }
+
+  /* CLOSE — по центру */
+  .timeClose{
+    transform: none;
+  }
+
+  /* BIO текст — чтобы не вылазил */
+  .bioText{
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    transform: none;
+  }
+
+  /* футер — аккуратно */
+  .footLine,
+  .footNote{
+    transform: none;
+    letter-spacing: 0.15em;
+    font-size: 11px;
+    text-align: center;
+  }
 }
