@@ -439,14 +439,14 @@ body{
   /* ---------- INTRO: A.C.A по центру и "сплюснуто" как референс ---------- */
   .wideIntro{
     /* правее/по центру (если надо ещё правее — увеличь 8px -> 10px/12px) */
-    transform: translateX(12px) scaleX(1.55) scaleY(0.45) !important;
+    transform: translateX(10px) scaleX(1.55) scaleY(0.45) !important;
     letter-spacing: 0.78em !important;
     font-size: clamp(44px, 10vw, 74px) !important;
   }
 
   /* ---------- MENU: A.C.A + DATE как на референсе ---------- */
   .wideLogo{
-    transform: translateX(10px) scaleX(1.55) scaleY(0.45) !important;
+    transform: translateX(6px) scaleX(1.55) scaleY(0.45) !important;
     letter-spacing: 0.78em !important;
     font-size: clamp(46px, 11vw, 76px) !important;
   }
@@ -474,6 +474,7 @@ body{
   .footLine{ font-size: 12px !important; letter-spacing: 0.22em !important; }
   .footNote{ font-size: 11px !important; letter-spacing: 0.10em !important; }
 }
+
 
 
 
