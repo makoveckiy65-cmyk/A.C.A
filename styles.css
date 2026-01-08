@@ -348,4 +348,85 @@ body{
     font-size: 11px;
     letter-spacing: 0.12em;
   }
+}/* ================= MOBILE OVERRIDES (PHONE ONLY) v2 ================= */
+@media (max-width: 720px){
+
+  /* на телефоне убираем ручные сдвиги (ПК не меняется) */
+  :root{
+    --introShift: 0px;
+    --menuAcaShift: 0px;
+    --menuDateShift: 0px;
+    --timeBlockShift: 0px;
+    --timeCloseShift: 0px;
+    --footShift: 0px;
+  }
+
+  /* чтобы не было "огромной высоты" и всё было по центру */
+  .screen{
+    min-height: 100vh;
+    padding: 5vh 0;
+  }
+
+  /* ===== INTRO: сплюснуть и чтобы ВЛЕЗАЛО ===== */
+  .wideIntro{
+    transform: translateX(0) scaleX(1.18) scaleY(0.38);
+    letter-spacing: 0.55em;
+    font-size: clamp(46px, 13vw, 74px);
+  }
+
+  /* ===== MENU A.C.A: сплюснуть и чуть крупнее ===== */
+  .wideLogo{
+    transform: translateX(0) scaleX(1.18) scaleY(0.38);
+    letter-spacing: 0.55em;
+    font-size: clamp(44px, 12vw, 74px);
+  }
+
+  /* ===== DATE: чуть крупнее и компактнее ===== */
+  .dateLine{
+    transform: translateX(0) scaleX(1.10) scaleY(0.78);
+    letter-spacing: 0.42em;
+    font-size: 16px;
+  }
+
+  /* ===== TIME: НЕ растягивать, а СПЛЮСНУТЬ и чтобы влазило ===== */
+  .timeBig{
+    transform: translateX(0) scaleX(1.10) scaleY(0.55);
+    font-size: clamp(44px, 12vw, 72px);
+    gap: 1.2rem;
+  }
+
+  .timeLbl{
+    font-size: .50em;
+    letter-spacing: .18em;
+  }
+
+  .timeClose{
+    transform: translateX(0);
+  }
+
+  /* ===== кнопки: убрать “синий” на телефоне (особенно ссылки) ===== */
+  .actionBtn, .linkBtn{
+    color:#000;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .linkBtn:visited,
+  .linkBtn:active,
+  .linkBtn:focus{
+    color:#000;
+  }
+  .actionBtn span,
+  .linkBtn span{
+    color: inherit;
+  }
+
+  /* ===== FOOTER: чтобы НЕ был растянутый/приплюснутый ===== */
+  .footLine{
+    transform: translateX(0) translateY(10px) scaleX(1) scaleY(1);
+    letter-spacing: 0.18em;
+  }
+  .footNote{
+    transform: translateX(0) translateY(10px) scaleX(1) scaleY(1);
+    letter-spacing: 0.10em;
+  }
 }
+
