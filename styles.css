@@ -427,7 +427,18 @@ body{
   .footNote{
     transform: translateX(0) translateY(10px) scaleX(1) scaleY(1);
     letter-spacing: 0.10em;
+  }/* ========== MOBILE ONLY FIX ========== */
+@media (max-width: 720px){
+
+  :root{
+    /* центрируем A.C.A и интро ТОЛЬКО НА ТЕЛЕФОНЕ */
+    --introShift: 55px;
+    --menuAcaShift: 40px;
+    --menuDateShift: 0px;
   }
+
+}
+
 
 
 
