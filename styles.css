@@ -353,7 +353,7 @@ body{
 
   /* на телефоне убираем ручные сдвиги (ПК не меняется) */
   :root{
-    --introShift: 5px;
+    --introShift: 0px;
     --menuAcaShift: 10px;
     --menuDateShift: 0px;
     --timeBlockShift: 0px;
@@ -432,12 +432,13 @@ body{
 
   :root{
     /* центрируем A.C.A и интро ТОЛЬКО НА ТЕЛЕФОНЕ */
-    --introShift: 80px;
-    --menuAcaShift: 60px;
+    --introShift: 120px;
+    --menuAcaShift: 80px;
     --menuDateShift: 0px;
   }
 
 }
+
 
 
 
