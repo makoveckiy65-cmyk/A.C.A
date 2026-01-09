@@ -353,8 +353,8 @@ body{
 
   /* на телефоне убираем ручные сдвиги (ПК не меняется) */
   :root{
-    --introShift: 0px;
-    --menuAcaShift: 0px;
+    --introShift: 10px;
+    --menuAcaShift: 10px;
     --menuDateShift: 0px;
     --timeBlockShift: 0px;
     --timeCloseShift: 0px;
@@ -428,5 +428,6 @@ body{
     transform: translateX(0) translateY(10px) scaleX(1) scaleY(1);
     letter-spacing: 0.10em;
   }
+
 
 
