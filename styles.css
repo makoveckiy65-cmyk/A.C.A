@@ -442,14 +442,14 @@ body{
 
   /* ===== INTRO A.C.A — по центру, сплюснуто ===== */
   .wideIntro{
-    transform: translateX(0) scaleX(1.25) scaleY(0.45);
+    transform: translateX(10) scaleX(1.25) scaleY(0.45);
     letter-spacing: 0.6em;
     font-size: 48px;
   }
 
   /* ===== MENU A.C.A — по центру, как реф ===== */
   .wideLogo{
-    transform: translateX(0) scaleX(1.25) scaleY(0.45);
+    transform: translateX(10) scaleX(1.25) scaleY(0.45);
     letter-spacing: 0.6em;
     font-size: 48px;
   }
@@ -481,6 +481,7 @@ body{
     letter-spacing: 0.22em;
   }
 }
+
 
 
 
