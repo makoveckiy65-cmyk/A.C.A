@@ -615,9 +615,10 @@ body{
 
   /* A.C.A в меню — сдвиг по X (вправо = плюс, влево = минус) */
   .wideLogo{
-    transform: translateX(12px) scaleX(1.25) scaleY(0.45);
+    transform: translateX(12px) scaleX(1.32) scaleY(0.45);
   }
 }
+
 
 
 
