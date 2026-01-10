@@ -435,7 +435,94 @@ body{
     --introShift: 0px;
     --menuAcaShift: 0px;
     --menuDateShift: 0px;
+  }/* ===================== MOBILE FINAL FIX (PHONE ONLY) ===================== */
+@media (max-width: 720px){
+
+  /* 1) На телефоне убираем все ручные translateX-сдвиги (они ломают центровку) */
+  :root{
+    --introShift: 0px;
+    --menuAcaShift: 0px;
+    --menuDateShift: 0px;
+    --timeBlockShift: 0px;
+    --timeCloseShift: 0px;
+    --footShift: 0px;
   }
+
+  /* 2) На всякий случай режем всё, что может “вылезать” по бокам */
+  .content,
+  .block,
+  .screen{
+    overflow-x: hidden;
+  }
+
+  /* 3) INTRO A.C.A — по центру, “сплюснуто” и ВЛАЗИТ */
+  .wideIntro{
+    transform: translateX(0) scaleX(1.25) scaleY(0.45);
+    letter-spacing: 0.55em;
+    font-size: clamp(44px, 14vw, 78px);
+  }
+
+  /* 4) Меню A.C.A — по центру, “сплюснуто”, без уезда влево/вправо */
+  .wideLogo{
+    transform: translateX(0) scaleX(1.25) scaleY(0.45);
+    letter-spacing: 0.55em;
+    font-size: clamp(44px, 13vw, 78px);
+  }
+
+  /* 5) Дата — СДЕЛАТЬ “СПЛЮСНУТОЙ” и ЧУТЬ БОЛЬШЕ (как референс) */
+  .dateLine{
+    transform: translateX(0) scaleX(1.30) scaleY(0.60);
+    letter-spacing: 0.55em;
+    font-size: 18px;
+  }
+
+  /* 6) Все кнопки одинаковые (и в SOCIAL тоже) + убираем “синюю ссылку” */
+  .actionBtn,
+  .linkBtn{
+    width: min(420px, 90vw);
+    height: 58px;
+  }
+  .linkBtn,
+  .linkBtn:visited,
+  .linkBtn span{
+    color:#000;
+  }
+  .actionBtn span,
+  .linkBtn span{
+    letter-spacing: 0.35em;
+    font-size: 13px;
+  }
+
+  /* 7) Таймер — “сплюснутый”, влезает, по центру. CLOSE тоже по центру */
+  .timeBig{
+    transform: translateX(0) scaleX(1.18) scaleY(0.50);
+    font-size: clamp(44px, 11vw, 74px);
+    gap: 1.2rem;
+  }
+  .timeClose{
+    transform: translateX(0);
+  }
+
+  /* 8) Биография — чтобы не было ощущения “кривой” верстки по бокам */
+  .bioText{
+    transform: scaleX(1.00) scaleY(1.00);
+    letter-spacing: 0.06em;
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 90vw;
+  }
+
+  /* 9) Низ (footer) — ровно, без лишних “сплющиваний” */
+  .footLine{
+    transform: translateX(0) translateY(14px) scaleX(1.00) scaleY(1.00);
+    letter-spacing: 0.20em;
+  }
+  .footNote{
+    transform: translateX(0) translateY(14px) scaleX(1.00) scaleY(1.00);
+    letter-spacing: 0.10em;
+  }
+}
+
 
 
 
