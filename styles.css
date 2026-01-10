@@ -610,14 +610,15 @@ body{
 
   /* A.C.A в интро — сдвиг по X (вправо = плюс, влево = минус) */
   .wideIntro{
-    transform: translateX(18px) scaleX(1.25) scaleY(0.45);
+    transform: translateX(28px) scaleX(1.25) scaleY(0.45);
   }
 
   /* A.C.A в меню — сдвиг по X (вправо = плюс, влево = минус) */
   .wideLogo{
-    transform: translateX(14px) scaleX(1.25) scaleY(0.45);
+    transform: translateX(22px) scaleX(1.25) scaleY(0.45);
   }
 }
+
 
 
 
