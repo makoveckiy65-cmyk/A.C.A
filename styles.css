@@ -369,14 +369,14 @@ body{
 
   /* ===== INTRO: сплюснуть и чтобы ВЛЕЗАЛО ===== */
   .wideIntro{
-    transform: translateX(20) scaleX(1.18) scaleY(0.38);
+    transform: translateX(12) scaleX(1.18) scaleY(0.38);
     letter-spacing: 0.55em;
     font-size: clamp(46px, 13vw, 74px);
   }
 
   /* ===== MENU A.C.A: сплюснуть и чуть крупнее ===== */
   .wideLogo{
-    transform: translateX(20) scaleX(1.18) scaleY(0.38);
+    transform: translateX(40) scaleX(1.18) scaleY(0.38);
     letter-spacing: 0.55em;
     font-size: clamp(44px, 12vw, 74px);
   }
@@ -432,12 +432,13 @@ body{
 
   :root{
     /* центрируем A.C.A и интро ТОЛЬКО НА ТЕЛЕФОНЕ */
-    --introShift: 80px;
-    --menuAcaShift: 50px;
+    --introShift: 0px;
+    --menuAcaShift: 0px;
     --menuDateShift: 0px;
   }
 
 }
+
 
 
 
