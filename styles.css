@@ -521,7 +521,92 @@ body{
     transform: translateX(0) translateY(14px) scaleX(1.00) scaleY(1.00);
     letter-spacing: 0.10em;
   }
+}/* ================== PHONE FINAL FIX v2 (append at very end) ================== */
+@media (max-width: 720px){
+
+  /* 1) на телефоне убираем десктопные "сдвиги" */
+  :root{
+    --introShift: 0px;
+    --menuAcaShift: 0px;
+    --menuDateShift: 0px;
+    --timeBlockShift: 0px;
+    --timeCloseShift: 0px;
+    --footShift: 0px;
+  }
+
+  /* 2) INTRO A.C.A — чтобы НЕ обрезалось и было по центру */
+  .wideIntro{
+    transform: translateX(0) scaleX(1.25) scaleY(0.45);
+    letter-spacing: 0.55em;
+    font-size: clamp(46px, 14vw, 72px);
+  }
+
+  /* 3) MENU A.C.A — по центру и без “ухода” */
+  .wideLogo{
+    transform: translateX(0) scaleX(1.25) scaleY(0.45);
+    letter-spacing: 0.55em;
+    font-size: clamp(40px, 12vw, 66px);
+  }
+
+  /* 4) DATE — сплюснутая и чуть крупнее/красивее */
+  .dateLine{
+    transform: translateX(0) scaleX(1.18) scaleY(0.72);
+    letter-spacing: 0.62em;
+    font-size: 16px;
+  }
+
+  /* 5) TIMER — чтобы влезали ВСЕ значения (включая секунды) */
+  .timeBig{
+    gap: 1.1rem;
+    font-size: clamp(34px, 9.5vw, 56px);
+    transform: translateX(0) scaleX(1.18) scaleY(0.52);
+  }
+  .timeLbl{
+    font-size: .38em;
+    letter-spacing: .18em;
+  }
+
+  /* 6) Кнопки — одинаковый размер, чтобы CLOSE не был больше */
+  .actionBtn,
+  .linkBtn{
+    width: min(360px, 88vw);
+    height: 56px;
+  }
+  .actionBtn span,
+  .linkBtn span{
+    font-size: 13px;
+    letter-spacing: 0.32em;
+    transform: scaleX(1.12) scaleY(0.90);
+    color: inherit;
+  }
+
+  /* CLOSE под таймером — без сдвига */
+  .timeClose{ transform: translateX(0); }
+
+  /* 7) Низ — чуть “сплюснуть” красиво */
+  .footLine{
+    transform: translateX(0) translateY(10px) scaleX(1.12) scaleY(0.95);
+  }
+  .footNote{
+    transform: translateX(0) translateY(10px) scaleX(1.06) scaleY(0.95);
+  }
+
+  /* 8) BIO — чтобы не вылазило и смотрелось ровно */
+  .bioText{
+    transform: scaleX(1.00) scaleY(0.92);
+    font-size: 16px;
+  }
+
+  /* 9) На айфоне “hover” иногда залипает (делает кнопку чёрной) — выключаем */
+  @media (hover: none){
+    .actionBtn:hover,
+    .linkBtn:hover{
+      background:#fff;
+      color:#000;
+    }
+  }
 }
+
 
 
 
