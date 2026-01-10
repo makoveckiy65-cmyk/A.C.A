@@ -354,7 +354,7 @@ body{
   /* на телефоне убираем ручные сдвиги (ПК не меняется) */
   :root{
     --introShift: 0px;
-    --menuAcaShift: 10px;
+    --menuAcaShift: 50px;
     --menuDateShift: 0px;
     --timeBlockShift: 0px;
     --timeCloseShift: 0px;
@@ -437,50 +437,8 @@ body{
     --menuDateShift: 0px;
   }
 
-}/* ================= MOBILE CENTER FIX (PHONE ONLY) ================= */
-@media (max-width: 720px){
 
-  /* ===== INTRO A.C.A — по центру, сплюснуто ===== */
-  .wideIntro{
-    transform: translateX(22) scaleX(1.25) scaleY(0.45);
-    letter-spacing: 0.6em;
-    font-size: 48px;
-  }
 
-  /* ===== MENU A.C.A — по центру, как реф ===== */
-  .wideLogo{
-    transform: translateX(22) scaleX(1.25) scaleY(0.45);
-    letter-spacing: 0.6em;
-    font-size: 48px;
-  }
-
-  /* ===== DATE — компактно под A.C.A ===== */
-  .dateLine{
-    transform: translateX(0) scaleX(1.05) scaleY(0.85);
-    letter-spacing: 0.35em;
-    font-size: 15px;
-  }
-
-  /* ===== TIMER — СПЛЮСНУТ, ЧИТАЕМЫЙ ===== */
-  .timeBig{
-    transform: translateX(0) scaleX(1.15) scaleY(0.55);
-    gap: 1.2rem;
-    font-size: 64px;
-  }
-
-  /* ===== TIMER LABELS (D H M S) ===== */
-  .timeLbl{
-    font-size: 0.45em;
-    letter-spacing: 0.18em;
-  }
-
-  /* ===== FOOTER TEXT — НЕ СПЛЮСНУТ ===== */
-  .footLine,
-  .footNote{
-    transform: translateX(0) scaleX(1) scaleY(1);
-    letter-spacing: 0.22em;
-  }
-}
 
 
 
