@@ -1,7 +1,7 @@
 const BIO_PAGES = [
-{
-  title: "FULL MOON",
-  text: `FULL MOON opens the album with a calm, almost alarm-like tone —
+  {
+    title: "FULL MOON",
+    text: `FULL MOON opens the album with a calm, almost alarm-like tone —
 soft, clear, and welcoming.
 As the seconds pass, you slowly fall into the atmosphere,
 feeling a light movement inside your head with every hit of the rhythm.
@@ -18,8 +18,9 @@ and strange biomechanical textures you cannot fully explain.
 
 The composition changes shape
 and steps into a new sound world.`
-}
+  }
 ];
+
 
 const intro = document.getElementById("intro");
 const introACA = document.getElementById("introACA");
@@ -148,4 +149,5 @@ window.renderSocials = function(){
 
 
 runIntro();
+
 
