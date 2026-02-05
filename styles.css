@@ -617,7 +617,15 @@ body{
   .wideLogo{
     transform: translateX(15px) scaleX(1.45) scaleY(0.45);
   }
+}  .bioTitle{
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  transform: scaleY(0.7);
+  margin-bottom: 22px;
 }
+
+
 
 
 
