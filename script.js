@@ -1,8 +1,7 @@
-const RELEASE_ISO = "2026-02-06T00:00:00+02:00";
-
 const BIO_PAGES = [
- title: "FULL MOON",
-text: `FULL MOON opens the album with a calm, almost alarm-like tone —
+{
+  title: "FULL MOON",
+  text: `FULL MOON opens the album with a calm, almost alarm-like tone —
 soft, clear, and welcoming.
 As the seconds pass, you slowly fall into the atmosphere,
 feeling a light movement inside your head with every hit of the rhythm.
@@ -18,7 +17,8 @@ You begin to hear interference, fragments,
 and strange biomechanical textures you cannot fully explain.
 
 The composition changes shape
-and steps into a new sound world.
+and steps into a new sound world.`
+}
 ];
 
 const intro = document.getElementById("intro");
@@ -89,9 +89,12 @@ window.renderBio = function(){
 };
 
 function renderBioPage(){
+  const page = BIO_PAGES[bioIndex];
+
   content.innerHTML = `
     <div class="block">
-      <div class="bioText">${BIO_PAGES[bioIndex]}</div>
+      <div class="bioTitle">${page.title}</div>
+      <div class="bioText">${page.text}</div>
       <button class="actionBtn" onclick="bioNext()"><span>NEXT</span></button>
     </div>
   `;
@@ -145,3 +148,4 @@ window.renderSocials = function(){
 
 
 runIntro();
+
