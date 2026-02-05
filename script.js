@@ -1,20 +1,24 @@
 const RELEASE_ISO = "2026-02-06T00:00:00+02:00";
 
 const BIO_PAGES = [
-  `A.C.A is not a loud statement, but rather an atmosphere. An invitation to a<br>
-   personal sound space, where the main thing is not words, but feeling.`,
+ title: "FULL MOON",
+text: `FULL MOON opens the album with a calm, almost alarm-like tone —
+soft, clear, and welcoming.
+As the seconds pass, you slowly fall into the atmosphere,
+feeling a light movement inside your head with every hit of the rhythm.
 
-  `A.C.A is not a collection of beats, but a musical space where emotions and states<br>
-   are hidden. There are no words, only sound<br>
-   overloaded, gloomy, but at the same time andr_teum tried to preserve the quality<br>
-   and thoughtfulness of the idea`,
+This track gently prepares your ears for the eleven soundscapes that follow.
 
-  `A.C.A album doesn't even need words. You want to listen to this music<br>
-   without words. You're completely immersed in the atmosphere and world<br>
-   that andr_teum invented.`,
+At 1:38, the sound begins to transform —
+bending, breaking, accelerating.
+Something unfamiliar appears, something unexpected.
 
-  `andr_teum tried to mix all genres of new electronic music in this<br>
-   album, so the album cant be boring.`
+From this moment, the music shifts toward the true voice of A.C.A.
+You begin to hear interference, fragments,
+and strange biomechanical textures you cannot fully explain.
+
+The composition changes shape
+and steps into a new sound world.
 ];
 
 const intro = document.getElementById("intro");
@@ -138,5 +142,6 @@ window.renderSocials = function(){
     </div>
   `;
 };
+
 
 runIntro();
