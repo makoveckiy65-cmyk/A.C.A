@@ -81,7 +81,9 @@ function renderHome(){
 
       <button class="switchBtn" onclick="toggleTheme()">A.C.A 2</button>
     </div>
-  `;
+  `;<button class="switchBtn" onclick="switchTheme()">
+  <span>A.C.A II</span>
+</button>
 }
 
 let bioIndex = 0;
