@@ -70,7 +70,7 @@ function timeHtml({d,h,m,s}){
 function renderHome(){
   content.innerHTML = `
     <div class="block">
-      <div><span class="wideLogo">A.C.A</span></div>
+      <div><span class="wideLogo">${darkMode ? "A.C.A 2" : "A.C.A"}</span></div>
       <div><span class="dateLine">06.02.2026</span></div>
 
       <div style="display:grid;gap:18px;justify-items:center;margin-top:10px">
@@ -78,6 +78,8 @@ function renderHome(){
         <button class="actionBtn" onclick="renderTime()"><span>TIME LEFT</span></button>
         <button class="actionBtn" onclick="renderSocials()"><span>SOCIAL</span></button>
       </div>
+
+      <button class="switchBtn" onclick="toggleTheme()">A.C.A 2</button>
     </div>
   `;
 }
@@ -149,5 +151,18 @@ window.renderSocials = function(){
 
 
 runIntro();
+let darkMode = false;
+
+function toggleTheme(){
+  darkMode = !darkMode;
+
+  if(darkMode){
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
+
+  renderHome();
+}
 
 
